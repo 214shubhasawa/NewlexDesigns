@@ -192,6 +192,7 @@ import {
   Legend,
 } from "recharts";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const timeSavedData = [
   { week: "Week 1", Manual: 12, AI: 2 },
@@ -202,33 +203,55 @@ const timeSavedData = [
 
 const AIAssistant = () => {
   return (
-    <div className="relative min-h-screen bg-white text-black">
-      {/* HERO SECTION (no gradient, solid bg-black) */}
-      <div className="relative h-screen w-screen flex flex-col justify-center items-center text-center px-4 bg-gradient-to-br from-black to-[#E32225] text-white">
-        {/* Text Content */}
+    <div className="relative min-h-screen bg-white text-black overflow-hidden">
+      {/* HERO SECTION */}
+      <section className="relative h-screen w-screen flex flex-col justify-center items-center text-center px-6 bg-gradient-to-br from-black to-[#E32225] text-white">
         <div className="relative z-10 max-w-4xl">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
+          <motion.h1
+            className="text-4xl md:text-6xl font-bold mb-4"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+          >
             AI Chat & Call Assistants
-          </h1>
-          <p className="text-lg md:text-xl text-gray-300 font-medium">
+          </motion.h1>
+
+          <motion.p
+            className="text-lg md:text-xl text-gray-300 font-medium"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5, duration: 1 }}
+          >
             Convert leads, handle support, and qualify prospects — all through
             intelligent, automated conversations.
-          </p>
+          </motion.p>
         </div>
-      </div>
+      </section>
 
-      {/* MAIN CONTENT (white bg, black text) */}
+      {/* MAIN CONTENT */}
       <div className="max-w-5xl mx-auto px-6 py-16">
-        <p className="text-xl text-gray-700 mb-12 leading-relaxed">
+        {/* Intro paragraph */}
+        <motion.p
+          className="text-xl text-gray-700 mb-12 leading-relaxed"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
           You're spending too much time on repetitive tasks. Whether it's
           answering the same customer questions, calling unqualified leads, or
           scheduling appointments — these bottlenecks slow growth. Our AI
           Assistants solve all of this by automating customer conversations
           across chat and phone.
-        </p>
+        </motion.p>
 
-        {/* Chat Assistant */}
-        <section className="mb-16">
+        {/* Chat Assistant Section */}
+        <motion.section
+          className="mb-16"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <h2 className="text-4xl font-bold mb-4 text-black">
             What is an AI Chat Assistant?
           </h2>
@@ -245,10 +268,16 @@ const AIAssistant = () => {
             <li>Lets users book appointments right inside the chat</li>
             <li>Responds 24/7 without the need for a human agent</li>
           </ul>
-        </section>
+        </motion.section>
 
-        {/* Call Assistant */}
-        <section className="mb-16">
+        {/* Call Assistant Section */}
+        <motion.section
+          className="mb-16"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <h2 className="text-4xl font-bold mb-4 text-black">
             What is an AI Call Assistant?
           </h2>
@@ -266,10 +295,16 @@ const AIAssistant = () => {
             <li>Transfer to a human seamlessly if needed</li>
             <li>Multi-language support and smart pause/interrupt</li>
           </ul>
-        </section>
+        </motion.section>
 
-        {/* Benefits */}
-        <section className="mb-20">
+        {/* Benefits Section */}
+        <motion.section
+          className="mb-20"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <h2 className="text-4xl font-bold mb-4 text-black">
             Why AI Assistants Are Game-Changing
           </h2>
@@ -297,16 +332,25 @@ const AIAssistant = () => {
               online.
             </li>
           </ul>
-        </section>
+        </motion.section>
 
-        {/* Charts */}
-        <section className="mb-20">
+        {/* Charts Section */}
+        <motion.section
+          className="mb-20"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <h2 className="text-4xl font-bold mb-4 text-black">
             Real-World Impact: Proven Stats
           </h2>
           <div className="grid md:grid-cols-3 gap-12">
             {/* Chart 1 */}
-            <div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 200 }}
+            >
               <h3 className="text-2xl font-bold mb-4 text-black">
                 Lead Response Time (mins)
               </h3>
@@ -323,10 +367,13 @@ const AIAssistant = () => {
                   <RechartTooltip />
                 </BarChart>
               </ResponsiveContainer>
-            </div>
+            </motion.div>
 
             {/* Chart 2 */}
-            <div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 200 }}
+            >
               <h3 className="text-2xl font-bold mb-4 text-black">
                 Lead-to-Customer Conversion Rate
               </h3>
@@ -343,10 +390,13 @@ const AIAssistant = () => {
                   <RechartTooltip />
                 </BarChart>
               </ResponsiveContainer>
-            </div>
+            </motion.div>
 
             {/* Chart 3 */}
-            <div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 200 }}
+            >
               <h3 className="text-2xl font-bold mb-4 text-black">
                 Weekly Support Hours Saved
               </h3>
@@ -371,12 +421,18 @@ const AIAssistant = () => {
                   <Legend />
                 </LineChart>
               </ResponsiveContainer>
-            </div>
+            </motion.div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Final CTA */}
-        <div className="text-center">
+        <motion.div
+          className="text-center"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+        >
           <h3 className="text-4xl font-bold mb-4 text-black">
             This Is Your Sign to Stop Working Manually
           </h3>
@@ -385,11 +441,15 @@ const AIAssistant = () => {
             your business.
           </p>
           <Link to="/contact">
-            <button className="relative px-6 py-3 bg-[#E32225] text-white font-semibold rounded-lg transition duration-300 shadow-lg hover:shadow-red-500/50">
+            <motion.button
+              className="relative px-6 py-3 bg-[#E32225] text-white font-semibold rounded-lg transition duration-300 shadow-lg hover:shadow-red-500/50"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+            >
               Book a Free Strategy Call
-            </button>
+            </motion.button>
           </Link>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

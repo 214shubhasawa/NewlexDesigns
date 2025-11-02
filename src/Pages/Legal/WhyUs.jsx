@@ -183,23 +183,199 @@
 
 // export default WhyUs;
 
+// import React from "react";
+// import { motion } from "framer-motion";
+
+// const WhyUs = () => {
+//   return (
+//     <div className="-mt-[100px] bg-white text-black overflow-hidden">
+//       {/* HERO SECTION */}
+//       <section className="h-[calc(100vh+100px)] flex flex-col justify-center items-center text-center bg-gradient-to-br from-black to-[#E32225] px-4 pt-[100px]">
+//         <div className="relative z-10 max-w-4xl">
+//           <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white">
+//             Why Work With Seyreon
+//           </h1>
+//           <p className="text-lg md:text-xl text-red-300 font-medium">
+//             We don’t just build bots — we build systems that give you back your
+//             time, your focus, and your freedom.
+//           </p>
+//         </div>
+//       </section>
+
+//       {/* DIFFERENTIATORS */}
+//       <section className="py-20 px-6 max-w-6xl mx-auto">
+//         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 bg-gradient-to-br from-black to-[#E32225] bg-clip-text text-transparent">
+//           We’re Not Just Another Automation Agency
+//         </h2>
+//         <div className="grid md:grid-cols-3 gap-10 text-left">
+//           {[
+//             {
+//               title: "Systems That Work While You Sleep",
+//               text: "We build automation that runs 24/7 — qualifying leads, booking calls, sending follow-ups — without lifting a finger.",
+//             },
+//             {
+//               title: "A Tech Stack That Talks to Each Other",
+//               text: "We blend tools like Make, Voiceflow, GHL, WhatsApp, OpenAI, and Google — into one seamless brain that runs your ops.",
+//             },
+//             {
+//               title: "No More Manual Bottlenecks",
+//               text: "Your team shouldn't be copy-pasting leads, sending reminders, or chasing reviews. We eliminate busywork for good.",
+//             },
+//             {
+//               title: "Launch in Days, Not Months",
+//               text: "Our systems are lean and fast — no bloated builds or endless back-and-forth. We move fast and ship sharp.",
+//             },
+//             {
+//               title: "Human Support, Always",
+//               text: "You’ll have real humans behind your automation — guiding you, tweaking, evolving. We’re here even after go-live.",
+//             },
+//             {
+//               title: "Designed for Founders",
+//               text: "Every system we build is meant to reduce your stress, give you dashboards, alerts, and data that makes sense to *you*.",
+//             },
+//           ].map((item, index) => (
+//             <motion.div
+//               key={index}
+//               className="bg-white p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-gray-300 transition transform hover:-translate-y-1 hover:scale-[1.03] duration-300"
+//               initial={{ opacity: 0, y: 20 }}
+//               whileInView={{ opacity: 1, y: 0 }}
+//               viewport={{ once: true }}
+//               transition={{ duration: 0.5, delay: index * 0.1 }}
+//             >
+//               <h3 className="text-xl font-semibold mb-2 bg-gradient-to-br from-black to-[#E32225] bg-clip-text text-transparent">
+//                 {item.title}
+//               </h3>
+//               <p>{item.text}</p>
+//             </motion.div>
+//           ))}
+//         </div>
+//       </section>
+
+//       {/* TRUST-BUILDING SECTION */}
+//       <section className="py-20 px-6 max-w-5xl mx-auto text-center">
+//         <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-br from-black to-[#E32225] bg-clip-text text-transparent">
+//           What Happens When Automation Just… Works?
+//         </h2>
+//         <p className="text-lg leading-relaxed">
+//           ✦ Your team focuses on growth instead of tasks.
+//           <br />
+//           ✦ Your users get faster replies, smoother experiences.
+//           <br />
+//           ✦ Your business scales without scaling headaches.
+//           <br />
+//           <br />
+//           That’s what we bring — clarity, speed, and momentum.
+//         </p>
+//       </section>
+
+//       {/* MINI TESTIMONIAL STYLE BLOCKS */}
+//       <section className="py-20 px-6 max-w-6xl mx-auto">
+//         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 bg-gradient-to-br from-black to-[#E32225] bg-clip-text text-transparent">
+//           Client Wins
+//         </h2>
+//         <div className="grid md:grid-cols-3 gap-10 text-left">
+//           {[
+//             {
+//               name: "Healthcare Startup",
+//               result:
+//                 "Built an AI call assistant that qualified 300+ leads/month — no agents required.",
+//             },
+//             {
+//               name: "Real Estate Brand",
+//               result:
+//                 "Automated WhatsApp bot booked 80+ viewings/month and synced with Google Calendar.",
+//             },
+//             {
+//               name: "Ecom Founder",
+//               result:
+//                 "Referral system + loyalty engine brought 40% more repeat purchases within 6 weeks.",
+//             },
+//           ].map((item, index) => (
+//             <motion.div
+//               key={index}
+//               className="bg-white p-6 rounded-xl shadow-md border border-gray-200"
+//               initial={{ opacity: 0, y: 20 }}
+//               whileInView={{ opacity: 1, y: 0 }}
+//               viewport={{ once: true }}
+//               transition={{ duration: 0.5, delay: index * 0.1 }}
+//             >
+//               <p className="font-semibold text-sm mb-2">{item.name}</p>
+//               <p>{item.result}</p>
+//             </motion.div>
+//           ))}
+//         </div>
+//       </section>
+
+//       {/* VALUES */}
+//       <section className="py-20 px-6 max-w-6xl mx-auto">
+//         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 bg-gradient-to-br from-black to-[#E32225] bg-clip-text text-transparent">
+//           Our Values (What We Stand For)
+//         </h2>
+//         <div className="grid md:grid-cols-2 gap-8">
+//           {[
+//             {
+//               title: "Transparency",
+//               text: "No hidden costs. No confusion. We’re open about what’s possible and what’s not — always.",
+//             },
+//             {
+//               title: "Speed with Quality",
+//               text: "We don’t drag timelines. But we never rush what matters. We balance launch speed with performance.",
+//             },
+//             {
+//               title: "Adaptability",
+//               text: "Tech moves fast — and so do we. Every system we build is ready to evolve with your needs.",
+//             },
+//             {
+//               title: "Client-First Thinking",
+//               text: "We’re not here to upsell. We’re here to build something useful. We care more about value than vanity.",
+//             },
+//           ].map((item, index) => (
+//             <motion.div
+//               key={index}
+//               className="bg-white p-6 rounded-xl shadow-md border border-gray-200"
+//               initial={{ opacity: 0, y: 20 }}
+//               whileInView={{ opacity: 1, y: 0 }}
+//               viewport={{ once: true }}
+//               transition={{ duration: 0.6, delay: index * 0.1 }}
+//             >
+//               <h3 className="text-xl font-semibold mb-2 bg-gradient-to-br from-black to-[#E32225] bg-clip-text text-transparent">
+//                 {item.title}
+//               </h3>
+//               <p>{item.text}</p>
+//             </motion.div>
+//           ))}
+//         </div>
+//       </section>
+//     </div>
+//   );
+// };
+
+// export default WhyUs;
+
 import React from "react";
 import { motion } from "framer-motion";
 
 const WhyUs = () => {
   return (
-    <div className="-mt-[100px] bg-white text-black overflow-hidden">
+    <div className="bg-white text-black overflow-hidden">
       {/* HERO SECTION */}
-      <section className="h-[calc(100vh+100px)] flex flex-col justify-center items-center text-center bg-gradient-to-br from-black to-[#E32225] px-4 pt-[100px]">
-        <div className="relative z-10 max-w-4xl">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white">
+      <section className="relative h-screen flex justify-center items-center text-center bg-gradient-to-br from-black to-[#E32225] px-4">
+        <div className="absolute inset-0 bg-black/40"></div>
+
+        <motion.div
+          className="relative z-10 max-w-4xl"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
             Why Work With Seyreon
           </h1>
-          <p className="text-lg md:text-xl text-red-300 font-medium">
+          <p className="text-lg md:text-2xl text-red-300 font-medium">
             We don’t just build bots — we build systems that give you back your
             time, your focus, and your freedom.
           </p>
-        </div>
+        </motion.div>
       </section>
 
       {/* DIFFERENTIATORS */}

@@ -236,7 +236,7 @@ const serviceGroups = [
       "AI-Powered Call Assistants",
     ],
     reverse: false,
-    link: "/services/ai-assistant",
+    link: "/services/BrandIdentity",
   },
   {
     title: "Business Automation Workflows",
