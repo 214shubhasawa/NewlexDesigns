@@ -6,6 +6,7 @@ import Newsletter from "./Newsletter";
 import HomePhoto from "./HomePhoto"; // ✅ scrolling photos
 import HomeGlow from "./HomeGlow";   // ✅ new glowing section
 import HomeBlow from "./HomeBlow";
+import ServicesOverview from "./ServicesOverview";
 
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
       <HomeGlow />      {/* ✅ Glowing photo section */}
       {<HomeContent />} {/* 👈 Keep your content here */}
       <HomePhoto />     {/* ✅ Scrolling photo section */}
+      <ServicesOverview/>
       <HomeTestimonial />
       {/* <HomeBlow /> */}
       <Newsletter />
